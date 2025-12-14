@@ -1,0 +1,5 @@
+curl -X DELETE "https://management.azure.com/subscriptions/subscriptionID/resourceGroups/my
+resourcegroup/providers/Microsoft.Bing/accounts/Bing-custom2/customSearchConfigurations/Bing-custom2-config?api-version=2025-05
+01-preview" \
+-H "Authorization: Bearer zzzzzzzz" \
+-H "Content-Type: application/json" \
