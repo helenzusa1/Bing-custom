@@ -1,0 +1,27 @@
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "name": {
+      "value": "Bing-custom2"
+    },
+    "location": {
+      "value": "global"
+    },
+    "sku": {
+      "value": "G2"
+    },
+    "kind": {
+      "value": "Bing.GroundingCustomSearch"
+    },
+    "apiVersion": {
+      "value": "2020-06-10"
+    },
+    "resourceTags": {
+      "value": {
+        "name": "Bing-custom2"
+      }
+    }
+  }
+}
