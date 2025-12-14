@@ -1,0 +1,11 @@
+curl -X PUT "https://management.azure.com/subscriptions/xxxxxxxx/resourceGroups/my
+resourcegroup/providers/Microsoft.Bing/accounts/Bing-custom2?api-version=2020-06-10" \
+-H "Authorization: Bearer zzzzzzzz" \
+-H "Content-Type: application/json" \
+-d '{
+"type": "Microsoft.Bing/accounts",
+"location": "global",
+"sku": { "name": "G2" },
+"kind": "Bing.GroundingCustomSearch",
+"tags": {"name": "Bing-custom2"}
+}'
