@@ -1,0 +1,30 @@
+curl -X PUT "https://management.azure.com/subscriptions/subscriptionID/resourceGroups/my-resourcegrpup/providers/Microsoft.Bing/accounts/Bing-custom2/customSearchConfigurations/Bing
+custom2-config?api-version=2025-05-01-preview" \
+-H "Authorization: Bearer zzzzzzzz" \
+-H "Content-Type: application/json" \
+-d '{
+"properties": {
+"blockedDomains": [
+{
+"domain": "www.aa.com",
+"includeSubPages": true
+},
+{
+"domain": "www.yahoo.com",
+"includeSubPages": false
+}
+],
+"allowedDomains": [
+{
+"domain": "www.amazon.com",
+"includeSubPages": true,
+"boostLevel": "Demoted"
+},
+{
+"domain": "www.weather.com",
+"includeSubPages": false,
+"boostLevel": "Default"
+}
+]
+}
+}'
