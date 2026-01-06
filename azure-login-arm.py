@@ -1,6 +1,9 @@
 
 #!/usr/bin/env python3
 """
+Reference article:
+  https://learn.microsoft.com/en-us/azure/azure-monitor/platform/rest-api-walkthrough?tabs=SDK%2Cportal 
+  
 Azure SDK equivalent of:
   - az login --tenant "<tenant-id>"
   - az login --scope https://management.core.windows.net//.default   (SDK uses https://management.azure.com/.default)
@@ -167,3 +170,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
