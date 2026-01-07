@@ -11,7 +11,7 @@ dotnet add package Azure.ResourceManager
 dotnet add package Azure.ResourceManager.Resources
 dotnet add package System.CommandLine --prerelease
 
-3. Replace program.cs with the actual code.
+3. Replace Program.cs with the actual code.
 
 4. Build
 
