@@ -1,0 +1,6 @@
+[
+  { "domain": "www.aa.com", "includeSubPages": true },
+  { "domain": "www.yahoo.com", "includeSubPages": false }
+]
+
+

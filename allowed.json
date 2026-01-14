@@ -1,0 +1,5 @@
+[
+  { "domain": "www.amazon.com", "includeSubPages": true, "boostLevel": "Default" },
+  { "domain": "www.weather.com", "includeSubPages": true, "boostLevel": "Default" }
+]
+
