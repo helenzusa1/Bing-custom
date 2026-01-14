@@ -1,0 +1,21 @@
+{ 
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": { "value": "Bing-custom1"},
+        "sku": { "value": "G2" },
+        "kind": { "value": "Bing.GroundingCustomSearch"},
+        "apiVersion:": {"value": "2020-06-10"},
+        "location": {"value": "eastus2"}
+    },
+    "resourceTags": [
+        {
+            "type": "Microsoft.Bing/accounts",
+            "apiVersion": "[parameters('apiVersion')]",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "sku": "[parameters('sku')]",
+            "kind": "[parameters('kind')]"
+        }
+    ]
+}
