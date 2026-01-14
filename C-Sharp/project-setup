@@ -1,53 +1,11 @@
-1. create a new console app
-
-mkdir AzureLoginArmCs
-cd AzureLoginArmCs
-dotnet new console
-
-2. Add packages
-
-dotnet add package Azure.Identity
-dotnet add package Azure.ResourceManager
-dotnet add package Azure.ResourceManager.Resources
-dotnet add package System.CommandLine --prerelease
-
-3. Replace Program.cs with the actual code.
-
-4. Build
-
-dotnet build
-
-5. Run - examples
-
-
-dotnet run -- \
-  --mode serviceprincipal \
-  --tenant-id <TENANT_ID> \
-  --client-id <APP_ID> \
-  --client-secret <SECRET> \
-  --subscription-id <SUB_ID> \
-  --resource https://management.azure.com/.default \
-  --list-rgs \
-  --output-bearer
-
-It will print:
-Authorization: Bearer <token>
-
-
-curl -sS \
-  -H "Authorization: Bearer <paste_token_here>" \
-  -H "Content-Type: application/json" \
-  "https://management.azure.com/subscriptions/<SUB_ID>/resourcegroups?api-version=2021-04-01"
-
-
-result:
-
-{
-  "value": [
-    { "id": "...", "name": "rg1" },
-    { "id": "...", "name": "rg2" }
-  ]
-}
-
-
-Before running curl command, make sure you have the RBAC setup for the client. READER role is needed.
+dotnet new console --framework net9.0
+dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+dotnet nuget enable source nuget.org
+dotnet nuget list source
+dotnet nuget locals all --clear
+dotnet restore .\Bing-custom.csproj
+dotnet add .\Bing-custom.csproj package Azure.Identity --source nuget.org
+dotnet add .\Bing-custom.csproj package DotNetEnv     --source nuget.org
+dotnet list .\Bing-custom.csproj package
+dotnet build .\Bing-custom.csproj
+dotnet run  .\Bing-custom.csproj
