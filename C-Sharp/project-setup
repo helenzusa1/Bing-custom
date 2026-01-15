@@ -8,4 +8,19 @@ dotnet add .\Bing-custom.csproj package Azure.Identity --source nuget.org
 dotnet add .\Bing-custom.csproj package DotNetEnv     --source nuget.org
 dotnet list .\Bing-custom.csproj package
 dotnet build .\Bing-custom.csproj
-dotnet run  .\Bing-custom.csproj
+
+There are 5 ways to run:
+1> dotnet run  .\Bing-custom.csproj
+This is default to use serviceprincipal.
+
+2> dotnet run .\Bing-custom.csproj -- --mode azurecli
+This uses azure CLI.
+
+3> dotnet run .\Bing-custom.csproj -- --mode interactive
+This is interactive mode, however my testing was not successful with this mode.
+
+4> dotnet run .\Bing-custom.csproj -- --mode serviceprincipal
+This uses serviceprincipal as well. 
+
+5> dotnet run .\Bing-custom.csproj -- --mode managedidentity
+This mode uses managed identity. However, this method will not work in local laptop. It only works in Azure hosted resources.
