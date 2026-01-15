@@ -1,3 +1,7 @@
+Prepare .env file, example in parent folder, rename .env.sample as .env, fill in those parameter values.
+Prepare allowed list in allowed.json.
+Prepare blocked list in blocked.json.
+
 dotnet new console --framework net9.0
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 dotnet nuget enable source nuget.org
