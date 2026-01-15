@@ -23,6 +23,7 @@ class Program
         WriteIndented = false
     };
 
+
     // add near the other helpers in Program.cs
     static List<T>? LoadJsonArray<T>(string? path, string label)
     {
@@ -75,8 +76,29 @@ class Program
         TryLoadDotEnv();
         var cfg = LoadConfig();
 
+
+        // --- NEW: accept command-line override for --mode ---
+        // Supports:   dotnet run .\Bing-custom.csproj -- --mode azurecli
+        //           or dotnet run .\Bing-custom.csproj -- --mode=azurecli
+        string? cliMode = null;
+        for (int i = 0; i < args.Length; i++)
+        {
+            if (args[i] == "--mode" && i + 1 < args.Length)
+            {
+                cliMode = args[i + 1];
+                i++; // skip the value
+            }
+            else if (args[i].StartsWith("--mode=", StringComparison.OrdinalIgnoreCase))
+            {
+                cliMode = args[i].Substring("--mode=".Length);
+            }
+        }
+
         // Default mode is serviceprincipal if unset
-        var mode = cfg.AUTH_MODE ?? "serviceprincipal";
+        
+        var mode = cliMode 
+                ?? cfg.AUTH_MODE 
+                ?? "serviceprincipal";
 
         // Basic required settings
         Require(cfg.SUBSCRIPTION_ID, "SUBSCRIPTION_ID");
