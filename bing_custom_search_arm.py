@@ -14,7 +14,7 @@ There are 5 ways to run:
 2> python bing_custom_search_arm.py --mode azurecli
 3> python bing_custom_search_arm.py --mode serviceprincipal
 4> python bing_custom_search_arm.py --mode managedidentity #This mode only works in Azure-hosted resources
-5> python bing_custom_search_arm.py
+5> python bing_custom_search_arm.py   # This will default to serviceprincipal mode
 
 """
 
@@ -385,3 +385,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
