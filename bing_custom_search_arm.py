@@ -7,6 +7,15 @@ Authenticate via the chosen mode, then configure Bing Custom Search via ARM:
 
 Configuration comes from a .env file and JSON list files (allowed/blocked).
 Auth modes supported: serviceprincipal | managedidentity | azurecli | interactive
+
+There are 5 ways to run:
+
+1> python bing_custom_search_arm.py --mode interactive
+2> python bing_custom_search_arm.py --mode azurecli
+3> python bing_custom_search_arm.py --mode serviceprincipal
+4> python bing_custom_search_arm.py --mode managedidentity #This mode only works in Azure-hosted resources
+5> python bing_custom_search_arm.py
+
 """
 
 import os
