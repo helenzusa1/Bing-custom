@@ -1,6 +1,6 @@
 # Goal
 
-This repo provides examples of using ARM method to provisioning 'Grounding with Bing custom search' resource and configuration.
+This repo provides examples of using ARM method to provision 'Grounding with Bing custom search' resource and configuration.
 
 # REST API
 
