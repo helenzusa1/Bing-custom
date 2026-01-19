@@ -8,7 +8,7 @@ cURL examples are included to demonstrate using Azure Resource Manager (ARM) RES
 
 # Python SDK
 
-bing_custom_search.py is an example of Python code which uses ARM method to login, authenticate, create Bing resource and configure/update Bing inclusion/exclusion list.
+bing_custom_search_arm.py is an example of Python code which uses ARM method to login, authenticate, create Bing resource and configure/update Bing inclusion/exclusion list.
 
 # C# SDK
 
