@@ -1,10 +1,10 @@
 # Goal
 
-This repo provides examples of using ARM method to provision 'Grounding with Bing custom search' resource and configuration.
+This repo provides examples of using Azure Resource Manager (ARM) method to provision 'Grounding with Bing custom search' resource and configuration.
 
 # REST API
 
-cURL examples are included to demonstrate using Azure Resource Manager (ARM) REST APIs to provision Bing resources and create or update allowed and blocked domain configurations.
+cURL examples are included to demonstrate using ARM REST APIs to provision Bing resources and create or update allowed and blocked domain configurations.
 
 # Python SDK
 
