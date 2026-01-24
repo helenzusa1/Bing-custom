@@ -12,7 +12,7 @@ There are 5 ways to run:
 
 1> python bing_custom_search_arm.py --mode interactive
 2> python bing_custom_search_arm.py --mode azurecli
-3> python bing_custom_search_arm.py --mode serviceprincipal
+3> python bing_custom_search_arm.py --mode serviceprincipal #When running in default or serviceprincipal mode, RBAC should be setup for the Bing resource.
 4> python bing_custom_search_arm.py --mode managedidentity #This mode only works in Azure-hosted resources
 5> python bing_custom_search_arm.py   # This will default to serviceprincipal mode
 
@@ -385,4 +385,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
