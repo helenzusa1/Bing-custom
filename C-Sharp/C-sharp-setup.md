@@ -56,3 +56,5 @@ Notes
 Keep Program.cs, .env, and any JSON configuration files in the same folder as Bing-custom.csproj.
 Use --project when running to avoid accidentally executing the wrong project.
 Interactive authentication behavior may vary depending on Entra ID tenant policies.
+
+When running in default or serviceprincipal mode, RBAC should be setup for the Bing resource.
