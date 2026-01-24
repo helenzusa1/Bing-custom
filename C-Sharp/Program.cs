@@ -220,11 +220,7 @@ class Program
         return mode.ToLowerInvariant() switch
         {
             "interactive"     => new InteractiveBrowserCredential(
-                                    new InteractiveBrowserCredentialOptions
-                                    {
-                                        TenantId = cfg.TENANT_ID
-                                    // ClientId left unset => uses the SDK's default dev app (OK for dev/testing)
-                                    }
+                                    new InteractiveBrowserCredentialOptions{TenantId = cfg.TENANT_ID}
                                 ),
             "azurecli"        => new AzureCliCredential(),
             "managedidentity" => string.IsNullOrWhiteSpace(cfg.MI_CLIENT_ID)
@@ -420,3 +416,4 @@ static class JsonExtensions
     }
 
 }
+
