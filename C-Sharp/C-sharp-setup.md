@@ -7,6 +7,7 @@ This guide explains how to set up and run the C# console application that authen
 .NET SDK 9.0 or later <br>
 An Azure subscription with sufficient permissions <br>
 Azure CLI installed and logged in (only required for azurecli mode) <br>
+Before creating a Bing resource, the authenticating identity (user or service principal) must have Contributor access on the target resource group or subscription.<br>
 
 ## Setup and Build 
 
