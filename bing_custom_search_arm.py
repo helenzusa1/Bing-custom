@@ -12,10 +12,11 @@ There are 5 ways to run:
 
 1> python bing_custom_search_arm.py --mode interactive
 2> python bing_custom_search_arm.py --mode azurecli
-3> python bing_custom_search_arm.py --mode serviceprincipal #When running in default or serviceprincipal mode, RBAC should be setup for the Bing resource.
+3> python bing_custom_search_arm.py --mode serviceprincipal 
 4> python bing_custom_search_arm.py --mode managedidentity #This mode only works in Azure-hosted resources
 5> python bing_custom_search_arm.py   # This will default to serviceprincipal mode
 
+Before creating a Bing resource, the authenticating identity (user or service principal) must have Contributor access on the target resource group or subscription.
 """
 
 import os
@@ -385,5 +386,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
